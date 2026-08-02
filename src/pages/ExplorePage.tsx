@@ -46,7 +46,7 @@ function ExplorePage() {
   }, [page]);
 
   return (
-    <div>
+    <div className="flex flex-col gap-10">
       <CurrentlyWatchingMovies currentMovies={currentMovies} />
       <PopularMovies
         page={page}

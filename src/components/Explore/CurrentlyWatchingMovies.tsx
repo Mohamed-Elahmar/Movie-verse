@@ -8,7 +8,7 @@ function CurrentlyWatchingMovies({
 }) {
   return (
     <div className="currently-watching border-u flex flex-col w-full  gap-5">
-      <h3 className="font text-5xl">Currently watching</h3>
+      <h3 className="font-space-grotesk text-5xl">Currently watching</h3>
       <div className="px-[2em] w-full">
         <MovieCarousel movies={currentMovies} />
       </div>

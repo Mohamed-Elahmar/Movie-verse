@@ -12,9 +12,9 @@ function MovieCarousel({ movies }: { movies: Movie[] }) {
     <DiagonalCarousel
       items={items}
       defaultActiveIndex={2}
-      slideSize={250}
+      slideSize={200}
       // onActiveIndexChange={()=>{movies.find((movie)=>(movie.title===));useNavigate()}}
-      className="h-[70vh] bg-black text-neutral-800 dark:bg-neutral-950 dark:text-neutral-100"
+      className="h-[70vh] bg-(--background-me) text-neutral-800 dark:bg-neutral-950 dark:text-neutral-100"
     />
   );
 }
