@@ -1,5 +1,5 @@
 import type { Movie } from "@/types/movie";
-import MoviesGrid from "../../components/Home/MoviesGrid";
+import MoviesGrid from "./MoviesGrid";
 import { PaginationSelector } from "./PaginationSelector";
 
 function PopularMovies({

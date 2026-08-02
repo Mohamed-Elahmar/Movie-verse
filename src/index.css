@@ -6,6 +6,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --font-mono: "Geist Mono", monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
   --font-heading: var(--font-sans);
   --font-sans: "Geist Variable", sans-serif;
   --color-sidebar-ring: var(--sidebar-ring);
@@ -49,6 +52,18 @@
 }
 
 :root {
+  --background-me: #0b0f19;
+  --surface-me: #151b2d;
+  --card-me: #1f2937;
+
+  --primary-me: #3b82f6;
+  --secondary-me: #8b5cf6;
+  --accent-me: #22d3ee;
+
+  --text-me: #f8fafc;
+  --muted-text-me: #94a3b8;
+  --border-me: #2a3447;
+  /*  */
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -127,4 +142,11 @@
   html {
     @apply font-sans;
   }
+}
+
+.logo {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }

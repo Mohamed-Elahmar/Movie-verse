@@ -1,5 +1,5 @@
 import type { Movie } from "@/types/movie";
-import MovieCard from "../../components/Home/MovieCard";
+import MovieCard from "./MovieCard";
 
 function MoviesGrid({ movies }: { movies: Movie[] }) {
   return (
