@@ -7,12 +7,12 @@ function MovieCard({ movie }: { movie: Movie }) {
   const navigate = useNavigate();
   return (
     <CardContainer
-      className="inter-var w-full "
+      className="inter-var w-full hover:cursor-pointer "
       onClick={() => {
         navigate(`/movie/${movie.id}`);
       }}
     >
-      <CardBody className="bg-(--card-me)  relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-[60vh] rounded-xl p-6 border flex flex-col justify-evenly overflow-hidden">
+      <CardBody className="bg-(--card-me)  relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/10 dark:bg-black dark:border-white/20 border-black/10 w-full h-[60vh] rounded-xl p-6 border flex flex-col justify-evenly overflow-hidden">
         <div>
           <CardItem
             translateZ="50"

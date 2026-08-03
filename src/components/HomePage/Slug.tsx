@@ -1,14 +1,12 @@
-import DecryptedText from "../DecryptedText";
+import TextAnimation from "@/components/ui/staggerText";
 
 function Slug() {
   return (
-    <DecryptedText
-      text="Where Every Click Opens a New Adventure."
-      animateOn="view"
-      clickMode="once"
-      speed={220}
-      className="text-5xl"
-    />
+    <div className="text-4xl font-medium">
+      <TextAnimation divideBy="word" delay={0.2}>
+        Where Every Click Opens a New Adventure.
+      </TextAnimation>
+    </div>
   );
 }
 

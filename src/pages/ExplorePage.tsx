@@ -1,6 +1,6 @@
 // import React from "react";
 import type { Movie } from "../types/movie";
-import CurrentlyWatchingMovies from "../components/Explore/CurrentlyWatchingMovies";
+import TopRatedMovies from "../components/Explore/TopRatedMovies";
 
 import { useEffect, useState } from "react";
 import PopularMovies from "@/components/Explore/PopularMovies";
@@ -12,12 +12,15 @@ function ExplorePage() {
   const [totalPages] = useState<number>(500);
 
   useEffect(() => {
-    fetch("https://api.themoviedb.org/3/movie/popular?language=en-US&page=11", {
-      headers: {
-        Authorization: `Bearer ${import.meta.env.VITE_API_AUTH_TOKEN}`,
-        accept: "application/json",
+    fetch(
+      "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1",
+      {
+        headers: {
+          Authorization: `Bearer ${import.meta.env.VITE_API_AUTH_TOKEN}`,
+          accept: "application/json",
+        },
       },
-    })
+    )
       .then((res) => {
         return res.json();
       })
@@ -47,7 +50,7 @@ function ExplorePage() {
 
   return (
     <div className="flex flex-col gap-10">
-      <CurrentlyWatchingMovies currentMovies={currentMovies} />
+      <TopRatedMovies currentMovies={currentMovies} />
       <PopularMovies
         page={page}
         setPage={setPage}

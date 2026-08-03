@@ -31,7 +31,7 @@ function MovieDetails() {
   }
 
   return (
-    <div className="flex flex-col gap-6 min-h-screen">
+    <div className="flex flex-col gap-6 min-h-full">
       <h2 className="text-4xl">{movieData?.original_title}</h2>
       <div className="relative flex flex-col gap-[4.5em] lg:flex-row  ">
         <Trailer
