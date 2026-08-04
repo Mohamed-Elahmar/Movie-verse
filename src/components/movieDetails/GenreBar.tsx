@@ -6,7 +6,7 @@ function GenreBar({ genres }: { genres: Genre[] }) {
       {genres.map((obj) => (
         <div
           key={obj.id}
-          className="border-3 place-content-center text-center rounded-xl"
+          className="border-2 border-(--border-me) place-content-center text-center rounded-xl text-(--primary-me)"
         >
           {obj.name}
         </div>

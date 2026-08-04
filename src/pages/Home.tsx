@@ -84,7 +84,7 @@ function Home() {
             followMouse
             proximity={250}
             autoAnimate={false}
-            onClick={() => console.log("clicked")}
+            onClick={() => console.log("disabled click")}
             disabled={true}
           >
             Sign-up / Log-in

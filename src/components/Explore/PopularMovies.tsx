@@ -16,11 +16,13 @@ function PopularMovies({
   return (
     <div className="currently-watching flex flex-col w-full gap-5">
       <h2 className="font-space-grotesk text-5xl">Popular movies</h2>
-      <PaginationSelector
-        page={page}
-        setPage={setPage}
-        totalPages={totalPages}
-      />
+      <div className="text-(--primary-me)">
+        <PaginationSelector
+          page={page}
+          setPage={setPage}
+          totalPages={totalPages}
+        />
+      </div>
       <MoviesGrid movies={popularMovies} />
     </div>
   );

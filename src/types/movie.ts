@@ -15,6 +15,15 @@ export interface Movie {
   vote_count: number;
 }
 
+export interface MovieCollection {
+  id: number;
+  name: string;
+  overview: string;
+  poster_path: string | null;
+  backdrop_path: string | null;
+  parts: Movie[];
+}
+
 // movie details
 export interface MovieData {
   adult: boolean;

@@ -26,7 +26,7 @@ function ExplorePage() {
       })
       .then((data) => {
         setCurrentMovies(data.results);
-        console.log(currentMovies);
+        console.log(`top rated movies: ${currentMovies}`);
       });
   }, []);
 
@@ -42,7 +42,7 @@ function ExplorePage() {
     )
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
+        console.log(`popular movies of page ${page} are ${res}`);
         setPopularMovies(res.results);
         // setTotalPages(res.total_pages);
       });
