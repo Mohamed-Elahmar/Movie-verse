@@ -13,6 +13,16 @@ export interface Movie {
   video: boolean;
   vote_average: number;
   vote_count: number;
+  softcore?: boolean;
+}
+
+export interface MovieCollection {
+  id: number;
+  name: string;
+  overview: string;
+  poster_path: string | null;
+  backdrop_path: string | null;
+  parts: Movie[];
 }
 
 // movie details

@@ -1,11 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
-@import "@fontsource-variable/geist";
-
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --font-mono: "Geist Mono", monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
   --font-heading: var(--font-sans);
   --font-sans: "Geist Variable", sans-serif;
   --color-sidebar-ring: var(--sidebar-ring);
@@ -49,6 +51,19 @@
 }
 
 :root {
+  --background-me: #0b0f19;
+  --background-transparent-me: #0b0f19f3;
+  --surface-me: #151b2d;
+  --card-me: #1f2937;
+
+  --primary-me: #3b82f6;
+  --secondary-me: #8b5cf6;
+  --accent-me: #22d3ee;
+
+  --text-me: #f8fafc;
+  --muted-text-me: #94a3b8;
+  --border-me: #2a3447;
+  /*  */
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -81,6 +96,17 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+}
+
+.divider {
+  border: none;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--accent-me),
+    transparent
+  );
 }
 
 .dark {
@@ -127,4 +153,15 @@
   html {
     @apply font-sans;
   }
+}
+
+.logo {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+#font-space-grotesk {
+  font-family: "Space Grotesk", sans-serif;
 }

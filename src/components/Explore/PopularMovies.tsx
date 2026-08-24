@@ -1,5 +1,5 @@
 import type { Movie } from "@/types/movie";
-import MoviesGrid from "../../components/Home/MoviesGrid";
+import MoviesGrid from "./MoviesGrid";
 import { PaginationSelector } from "./PaginationSelector";
 
 function PopularMovies({
@@ -15,12 +15,14 @@ function PopularMovies({
 }) {
   return (
     <div className="currently-watching flex flex-col w-full gap-5">
-      <h2 className="font text-5xl">Popular movies</h2>
-      <PaginationSelector
-        page={page}
-        setPage={setPage}
-        totalPages={totalPages}
-      />
+      <h2 className="font-space-grotesk text-5xl">Popular movies</h2>
+      <div className="text-(--primary-me)">
+        <PaginationSelector
+          page={page}
+          setPage={setPage}
+          totalPages={totalPages}
+        />
+      </div>
       <MoviesGrid movies={popularMovies} />
     </div>
   );

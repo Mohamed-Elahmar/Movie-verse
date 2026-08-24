@@ -36,7 +36,7 @@ function Trailer({
     })
       .then((res) => res.json())
       .then((res: MovieVideosResponse) => {
-        console.log(res.results);
+        // console.log(res.results);
         return res.results.find(
           (video) => video.site === "YouTube" && video.type === "Trailer",
         );
