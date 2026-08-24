@@ -4,7 +4,7 @@ import * as React from "react";
 import { motion, type Transition } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 export interface DiagonalCarouselItem {
   src: string;
   title: string;

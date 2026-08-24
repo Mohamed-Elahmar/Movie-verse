@@ -4,6 +4,7 @@ import TopRatedMovies from "../components/Explore/TopRatedMovies";
 
 import { useEffect, useState } from "react";
 import PopularMovies from "@/components/Explore/PopularMovies";
+import { Outlet } from "react-router-dom";
 
 function ExplorePage() {
   const [currentMovies, setCurrentMovies] = useState<Movie[]>([]);
@@ -50,6 +51,7 @@ function ExplorePage() {
 
   return (
     <div className="flex flex-col gap-10">
+      <Outlet />
       <TopRatedMovies currentMovies={currentMovies} />
       <PopularMovies
         page={page}

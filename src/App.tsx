@@ -1,15 +1,12 @@
-import { Routes, Route, useLocation } from "react-router";
+import { Outlet, useLocation } from "react-router-dom";
 
-import ExplorePage from "./pages/ExplorePage";
-import MovieDetails from "./pages/MovieDetails";
 import Logo from "./components/Explore/Logo";
 import SearchBar from "./components/Explore/SearchBar";
-import Home from "./pages/Home";
 
 function App() {
   const location = useLocation();
-  const showHeader = location.pathname !== "/";
   const isHome = location.pathname === "/";
+  const showHeader = !isHome;
 
   return (
     <div
@@ -21,11 +18,11 @@ function App() {
           <SearchBar />
         </header>
       )}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/explore" element={<ExplorePage />} />
-        <Route path="/movie/:movieId" element={<MovieDetails />} />
-      </Routes>
+
+      <main className="min-h-[60vh]">
+        <Outlet />
+      </main>
+
       <footer></footer>
     </div>
   );

@@ -3,7 +3,7 @@ import Particles from "../components/Particles";
 import Slug from "@/components/HomePage/Slug";
 import GhostCursor from "../components/GhostCursor";
 import SpecularButton from "../components/SpecularButton";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
   const navigate = useNavigate();

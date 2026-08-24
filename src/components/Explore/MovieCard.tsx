@@ -1,6 +1,6 @@
 import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
 
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 import type { Movie } from "@/types/movie";
 function MovieCard({ movie }: { movie: Movie }) {

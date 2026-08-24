@@ -1,5 +1,5 @@
 import GradientText from "../GradientText";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 function Logo({ className }: { className?: string }) {
   const navigate = useNavigate();
   return (
