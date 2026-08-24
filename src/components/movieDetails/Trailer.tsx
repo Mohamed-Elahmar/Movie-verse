@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Poster from "./Poster";
+
 export interface MovieVideosResponse {
   id: number;
   results: Video[];

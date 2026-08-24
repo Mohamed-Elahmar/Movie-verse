@@ -1,11 +1,10 @@
-import MovieCard from "@/components/Explore/MovieCard";
 import Collection from "@/components/movieDetails/Collection";
 import GenreBar from "@/components/movieDetails/GenreBar";
 import PartsSection from "@/components/movieDetails/PartsSection";
 import Poster from "@/components/movieDetails/Poster";
 import Trailer from "@/components/movieDetails/Trailer";
 import VoteBox from "@/components/movieDetails/VoteBox";
-import type { Movie, MovieCollection, MovieData } from "@/types/movie";
+import type { MovieCollection, MovieData } from "@/types/movie";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
